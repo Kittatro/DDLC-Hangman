@@ -9,33 +9,31 @@ background-repeat: no-repeat;
 }
 .iframe 
 {
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 350px;
-  height: 500px;
-  margin: 0 auto;
-  display:block;
-  justify-content: center;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 350px;
+	height: 500px;
+	margin: 0 auto;
+	display:block;
+	justify-content: center;
 }
 
 @font-face {
-    font-family: 'journal';
-    src: url('./hangman/fonts/journal.woff2') format('woff2'),
-         url('./hangman/fonts/journal.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+	font-family: 'journal';
+	src: url('./hangman/fonts/journal.woff2') format('woff2'),
+	url('./hangman/fonts/journal.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: 'hotmustard';
-    src: url('./hangman/fonts/hotmustard.woff2') format('woff2'),
-         url('./hangman/fonts../fonts/hotmustard.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+	font-family: 'hotmustard';
+	src: url('./hangman/fonts/hotmustard.woff2') format('woff2'),
+	url('./hangman/fonts../fonts/hotmustard.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
 .text-center
