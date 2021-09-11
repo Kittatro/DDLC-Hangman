@@ -16,6 +16,32 @@ let guessed = [];
 // The status of the word (I don't know how to explain it but basically it's the "_" and the letters that the player found)
 let wordStatus = null;
 
+// Will load the hangman sprites before having to draw them on screen
+function preloader() {
+	// counter
+	var i = 0;
+	
+	// create object
+	imageObj = new Image();
+	
+	// set image list
+	images = new Array();
+	images[0]="./images/0.jpg"
+	images[1]="./images/1.jpg"
+	images[2]="./images/2.jpg"
+	images[3]="./images/3.jpg
+	images[4]="./images/4.jpg"
+	images[5]="./images/5.jpg"
+	images[6]="./images/6.jpg"
+	images[7]="./images/7.jpg"
+	images[8]="./images/8.jpg"
+	
+	// start preloading
+	for(i=0; i<=8; i++) {
+		imageObj.src=images[i];
+	}
+}
+
 // Will choose a random word in the array for the player to guess
 function randomWord() 
 {
@@ -44,8 +70,8 @@ function handleGuess(chosenLetter)
 	{
 		mistakes++;
 		updateMistakes();
-		checkIfGameLost();
 		updateHangmanPicture();
+		checkIfGameLost();
 	}
 }
 
