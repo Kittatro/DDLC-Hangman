@@ -107,3 +107,13 @@ background-repeat: no-repeat;
 	background-color: black;
 	color: white;
 }
+
+@media screen and (max-width: 800px) {
+  .audio-info1,.audio-info2,.audio1,.audio2 {
+	  float:none;
+	  top: 0px;
+	  right: 0px;
+	  left: 0px;
+	  padding: 0px 0px 0px 0px;
+	}
+}
