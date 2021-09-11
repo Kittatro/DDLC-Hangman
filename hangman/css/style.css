@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+body
+{
+background-image: url("../images/bg.jpg");
+background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.iframe 
+{
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 350px;
+  height: 500px;
+  margin: 0 auto;
+  display:block;
+  justify-content: center;
+}
+
+@font-face {
+    font-family: 'journal';
+    src: url('../fonts/journal.woff2') format('woff2'),
+         url('../fonts/journal.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'hotmustard';
+    src: url('../fonts/hotmustard.woff2') format('woff2'),
+         url('../fonts/hotmustard.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.text-center
+{
+	text-align:center;
+}
+
+.stroke 
+{
+	color: white;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.journal
+{
+	font-family: 'journal';
+	font-size: 40px;
+}
+
+.hotmustard
+{
+	font-family: 'hotmustard';
+}
+
+.audio-info1,.audio-info2
+{
+	color:black;
+	background-color:white;
+	border:5px solid white;
+	border-radius:10px 5px 10px 5px;
+	background-color:white;
+	opacity:1;
+	box-shadow:5px 5px 10px white
+}
+
+.audio1
+{
+	float: left;
+	padding-top: 250px;
+}
+
+.audio2
+{
+	float: right;
+	padding-top: 250px;
+}
+
+.audio-info1
+{
+	position: absolute;
+	top: 300px; 
+	left: 90px;
+}
+
+.audio-info2
+{
+	position: absolute;
+	top: 300px; 
+	right: 90px;
+}
+
+.white
+{
+	background-color: white;
+}
+
+.white:hover
+{
+	background-color: black;
+	color: white;
+}

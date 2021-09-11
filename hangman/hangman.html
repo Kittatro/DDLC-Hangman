@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./css/style.css" media="all" rel="stylesheet" type="text/css">
+<script src='./js/hangman.js'></script>
+<title>Sayori's room</title>
+</head>
+<body>
+<div class="background">
+<h1 class="text-center hotmustard stroke">I gently open the door</h1>
+<div class="text-center journal stroke">Erreurs : <span id='mistakes'>0</span> sur 8</div>
+<div class="text-center">
+<p class="audio-info1 hotmustard"> Thème de base </p>
+<audio controls loop class="audio1">
+<source src="./songs/vanilla.mp3" type="audio/mp3">
+<source src="./songs/vanilla.ogg" type="audio/ogg">
+Ton navigateur ne supporte pas la balise audio... :(
+</audio>
+<p class="audio-info2 hotmustard"> Miraie remix</p>
+<audio controls loop class="audio2">
+<source src="./songs/miraie.mp3" type="audio/mp3">
+<source src="./songs/vanilla.ogg" type="audio/ogg">
+Ton navigateur ne supporte pas la balise audio... :(
+</audio>
+  <iframe class="iframe" img id='sayonara' src="./images/0.jpg" style="border:1px solid black;"> </iframe>
+    <p class="hotmustard stroke">Devinez les mots qui plaîront à Sayori !</p>
+    <p id="wordSpotlight" class="journal stroke">Le mot à deviner s'affichera ici.</p>
+    <div id="keyboard" class="journal stroke"></div>
+    <button class="hotmustard white" onClick="reset()">Nouvelle partie</button>
+	<button class="hotmustard white" onClick=window.location.href='../index.html'>Retourner à l'accueil</button>
+  </div> 
+</div>
+
+
+</body>
+</html>
