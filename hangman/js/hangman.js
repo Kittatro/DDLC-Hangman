@@ -5,7 +5,7 @@ var hiddenWord = ["aventure","amis","amusant","applaudissement","amour","bruyant
 var victory = new Audio('applause.mp3');
 var failure = new Audio('sardoche.mp3');
 
-// 
+// The word the player has to find (choosed from the array above)
 let answer = '';
 // Number of guesses the player has. More guesses = easier / Less guesses = harder
 let maxWrong = 8;
@@ -13,7 +13,7 @@ let maxWrong = 8;
 let mistakes = 0;
 // The letter selected by the player by clicking on a letter button
 let guessed = [];
-//
+// The status of the word (I don't know how to explain it but basically it's the "_" and the letters that the player found)
 let wordStatus = null;
 
 // Will choose a random word in the array for the player to guess
@@ -44,8 +44,8 @@ function handleGuess(chosenLetter)
 	{
 		mistakes++;
 		updateMistakes();
-		updateHangmanPicture();
 		checkIfGameLost();
+		updateHangmanPicture();
 	}
 }
 
@@ -92,8 +92,3 @@ function reset() {
 	updateMistakes();
 	generateButtons();
 }
-
-//document.getElementById('maxWrong').innerHTML = maxWrong;
-//randomWord();
-//generateButtons();
-//guessedWord();
