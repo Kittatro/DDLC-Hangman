@@ -119,7 +119,7 @@ background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 800px) {
-	.audio-info1,.audio-info2, {
+	.audio-info1,.audio-info2 {
 		display: none;
 	}
 }
