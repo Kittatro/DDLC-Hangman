@@ -117,6 +117,8 @@ background-repeat: no-repeat;
 		padding: 0px 0px 0px 0px;
 	}
 	.audio-info1,.audio-info2, {
-		transform: translate (-999px, 0px);
+		position: absolute;
+		top: 999px; 
+		right: 999px;
 	}
 }
