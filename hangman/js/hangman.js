@@ -39,7 +39,7 @@ function preloader() {
 	// start preloading
 	for(i=0; i<=8; i++) {
 		imageObj.src=images[i];
-		console.log(Loaded);
+		console.log(Image loaded);
 	}
 }
 
@@ -76,7 +76,7 @@ function handleGuess(chosenLetter)
 	}
 }
 
-// The function to update the sprite. The format is "number of mistakes".jpg E.G. first image will be 0.jpg
+// The function to update the sprite. The format is "number of mistakes".jpg E.G. first image will be "0.jpg"
 function updateHangmanPicture() {
 	document.getElementById('sayonara').src = './images/' + mistakes + '.jpg';
 }
