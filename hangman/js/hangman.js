@@ -29,7 +29,7 @@ function preloader() {
 	images[0]="./images/0.jpg"
 	images[1]="./images/1.jpg"
 	images[2]="./images/2.jpg"
-	images[3]="./images/3.jpg
+	images[3]="./images/3.jpg"
 	images[4]="./images/4.jpg"
 	images[5]="./images/5.jpg"
 	images[6]="./images/6.jpg"
