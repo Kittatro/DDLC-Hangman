@@ -116,9 +116,10 @@ background-repeat: no-repeat;
 		left: 0px;
 		padding: 0px 0px 0px 0px;
 	}
+}
+
+@media screen and (max-width: 800px) {
 	.audio-info1,.audio-info2, {
-		position: absolute;
-		top: 999px; 
-		right: 999px;
+		display: none;
 	}
 }
