@@ -7,41 +7,14 @@ var failure = new Audio('sardoche.mp3');
 
 // The word the player has to find (choosed from the array above)
 let answer = '';
-// Number of guesses the player has. More guesses = easier / Less guesses = harder
+// Number of guesses the player has. More guesses = easier / Less guesses = harder (his health)
 let maxWrong = 8;
-// Number of errors the player made, will be incremented
+// Number of bad guesses that the player has made. Will be incremented for each mistake
 let mistakes = 0;
 // The letter selected by the player by clicking on a letter button
 let guessed = [];
-// The status of the word (I don't know how to explain it but basically it's the "_" and the letters that the player found)
+// The status of the word (Badly explained but basically it's the "_" and the letters that the player has found)
 let wordStatus = null;
-
-// Will load the hangman sprites before having to draw them on screen
-function preloader() {
-	// counter
-	var i = 0;
-	
-	// create object
-	imageObj = new Image();
-	
-	// set image list
-	images = new Array();
-	images[0]="./images/0.jpg"
-	images[1]="./images/1.jpg"
-	images[2]="./images/2.jpg"
-	images[3]="./images/3.jpg"
-	images[4]="./images/4.jpg"
-	images[5]="./images/5.jpg"
-	images[6]="./images/6.jpg"
-	images[7]="./images/7.jpg"
-	images[8]="./images/8.jpg"
-	
-	// start preloading
-	for(i=0; i<=8; i++) {
-		imageObj.src=images[i];
-		console.log("Image loaded");
-	}
-}
 
 // Will choose a random word in the array for the player to guess
 function randomWord() 
@@ -61,12 +34,12 @@ function handleGuess(chosenLetter)
 {
 	guessed.indexOf(chosenLetter) === -1 ? guessed.push(chosenLetter) : null;
 	document.getElementById(chosenLetter).setAttribute('disabled', true);
-// Adds the letter to the word and checks if the player found every letter of it
+// Adds the letter to the word and checks if the player has found every letter of it
 	if (answer.indexOf(chosenLetter) >= 0) {
 		guessedWord();
 		checkIfGameWon();
 	}
-	// Adds an error, updates the sprite and checks if the player lost
+	// Adds an error, updates the sprite and checks if the player has lost
 	else if (answer.indexOf(chosenLetter) === -1) 
 	{
 		mistakes++;
@@ -76,23 +49,23 @@ function handleGuess(chosenLetter)
 	}
 }
 
-// The function to update the sprite. The format is "number of mistakes".jpg E.G. first image will be "0.jpg"
+// Updates the sprite. Format is "number of mistakes".jpg (E.G. first image will be "0.jpg")
 function updateHangmanPicture() {
 	document.getElementById('sayonara').src = './images/' + mistakes + '.jpg';
 }
 
-// Checks if the player found all the letters of the word and if yes gives him the win
+// Checks if the player has found all the letters of the word and if so gives him the win
 function checkIfGameWon() {
 	if (wordStatus === answer) {
-		document.getElementById('keyboard').innerHTML = 'Gagné !';
+		document.getElementById('keyboard').innerHTML = 'You won!';
 		victory.play();
 	}
 }
 
-// Checks if the player has lost and if yes gives the answer
+// Checks if the player has lost and if so ends the game and gives the answer
 function checkIfGameLost() {
 	if (mistakes === maxWrong) {
-		document.getElementById('wordSpotlight').innerHTML = 'La réponse était le mot : ' + answer;
+		document.getElementById('wordSpotlight').innerHTML = 'The answer was the word: ' + answer;
 		document.getElementById('keyboard').innerHTML = 'Sayonara :(';
 		failure.play();
 	}
@@ -104,7 +77,7 @@ function guessedWord() {
 	document.getElementById('wordSpotlight').innerHTML = wordStatus;
 }
 
-// Self-explanatory
+// Updates the amount of mistakes
 function updateMistakes() {
 	document.getElementById('mistakes').innerHTML = mistakes;
 }
